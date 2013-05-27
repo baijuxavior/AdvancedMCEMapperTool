@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9141F8C7-7868-4E5B-B709-9FA68418CDE6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AdvancedMCERemoteMapper.My.MyApplication</StartupObject>
+    <RootNamespace>AdvancedMCERemoteMapper</RootNamespace>
+    <AssemblyName>AdvancedMCERemoteMapper</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AdvancedMCERemoteMapper.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AdvancedMCERemoteMapper.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmMCERemote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMCERemote.Designer.vb">
+      <DependentUpon>frmMCERemote.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmMCERemote.resx">
+      <DependentUpon>frmMCERemote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow-Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow-Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow-Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow-Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ch-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ch+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DirectionDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DirectionLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DirectionRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DirectionUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Format.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fwd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Prev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vol-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vol+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume down %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VolumeDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VolumeUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChannelUP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChannelDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayPause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sharp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enter small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Power small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\On1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GSB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DVDMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiveTV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecTV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teletext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyTV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XBoxA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XBoxB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XBoxX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XBoxY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlankIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
