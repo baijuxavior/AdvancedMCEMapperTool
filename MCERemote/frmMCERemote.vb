@@ -1,19 +1,20 @@
 ﻿
 Public Class frmMCERemote
 
-    Dim HIDTranslationTable(,) As String = New String(,) {{"(None)", ""}, {"0", "27"}, {"1", "1E"}, {"2", "1F"}, {"3", "20"}, {"4", "21"}, {"5", "22"}, {"6", "23"}, {"7", "24"}, {"8", "25"}, {"9", "26"}, {"====================", ""}, _
-                                                {"A", "04"}, {"B", "05"}, {"C", "06"}, {"D", "07"}, {"E", "08"}, {"F", "09"}, {"G", "0A"}, {"H", "0B"}, {"I", "0C"}, {"J", "0D"}, {"K", "0E"}, _
-                                                {"L", "0F"}, {"M", "10"}, {"N", "11"}, {"O", "12"}, {"P", "13"}, {"Q", "14"}, {"R", "15"}, {"S", "16"}, {"T", "17"}, {"U", "18"}, {"V", "19"}, {"W", "1A"}, {"X", "1B"}, {"Y", "1C"}, {"Z", "1D"}, {"====================", ""}, _
-                                                {"Return", "28"}, {"Escape", "29"}, {"Backspace", "2A"}, {"Tab", "2B"}, {"Space", "2C"}, {"====================", ""}, {"OemMinus", "2D"}, {"OemPlus", "2E"}, {"OemOpenBracket", "2F"}, {"OemCloseBracket", "30"}, _
-                                                {"OemPipe", "31"}, {"OemSemiColon", "33"}, {"OemQuotes", "34"}, {"OemTilde", "35"}, {"OemComma", "36"}, {"OemPeriod", "37"}, {"OemQuestion", "38"}, _
-                                                {"CapsLock", "39"}, {"====================", ""}, {"F1", "3A"}, {"F2", "3B"}, {"F3", "3C"}, {"F4", "3D"}, {"F5", "3E"}, {"F6", "3F"}, {"F7", "40"}, {"F8", "41"}, {"F9", "42"}, {"F10", "43"}, {"F11", "44"}, {"F12", "45"}, {"====================", ""}, _
-                                                {"PrintScreen", "46"}, {"ScrollLock", "47"}, {"Break", "48"}, {"Insert", "49"}, {"Home", "4A"}, {"PageUp", "4B"}, {"PageDown", "4E"}, {"Delete", "4C"}, {"End", "4D"}, {"====================", ""}, {"Right", "4F"}, {"Left", "50"}, _
-                                                {"Down", "51"}, {"Up", "52"}, {"====================", ""}, {"NumLock", "53"}, {"NumPad /", "54"}, {"NumPad *", "55"}, {"NumPad -", "56"}, {"NumPad +", "57"}, {"NumPad Enter", "58"}, {"NumPad 1", "59"}, {"NumPad 2", "5A"}, {"NumPad 3", "5B"}, {"NumPad 4", "5C"}, _
-                                                {"NumPad 5", "5D"}, {"NumPad 6", "5E"}, {"NumPad 7", "5F"}, {"NumPad 8", "60"}, {"NumPad 9", "61"}, {"NumPad 0", "62"}, {"NumPad Del", "63"}, {"====================", ""}, {"App", "65"}, {"Keyboard Power", "66"}, {"Equals", "67"}, {"====================", ""}, {"F13", "68"}, {"F14", "69"}, {"F15", "6A"}, {"F16", "6B"}, _
-                                                {"F17", "6C"}, {"F18", "6D"}, {"F19", "6E"}, {"F20", "6F"}, {"F21", "70"}, {"D22", "71"}, {"F23", "72"}, {"F24", "73"}, {"====================", ""}, {"Execute", "74"}, {"Help", "75"}, {"Menu", "76"}, {"Select", "77"}, {"Stop", "78"}, {"Again", "79"}, {"Undo", "7A"}, {"Cut", "7B"}, {"Copy", "7C"}, _
-                                                {"Paste", "7D"}, {"Find", "7E"}, {"====================", ""}, {"Keyboard Mute", "7F"}, {"Keyboard VolumeUP", "80"}, {"Keyboard VolumeDown", "81"}, {"========== RAW INPUT MESSAGE", ""}, {"Shutdown", "8100"}, {"Sleep", "8200"}, {"Wake", "8300"}, {"========== WM_APPCOMMAND==", ""}, _
-                                                {"Mute", "E200"}, {"Info", "0902"}, {"VolumeUp", "E900"}, {"VolumeDown", "EA00"}, {"ChannelUp", "9C00"}, {"ChannelDown", "9D00"}, {"FastForward", "B300"}, {"Rewind", "B400"}, {"Play", "B000"}, {"Record", "B200"}, {"Pause", "B100"}, {"Stop", "B700"}, _
-                                                {"Next/Skip", "B500"}, {"Previous/Replay", "B600"}, {"Back", "2402"}, {"TV Guide", "8D00"}, {"Play/Pause", "CD00"}}
+    Dim HIDTranslationTable(,) As String = New String(,) {{"(None)", ""}, {"0", "27"}, {"1", "1E"}, {"2", "1F"}, {"3", "20"}, {"4", "21"}, {"5", "22"}, {"6", "23"}, {"7", "24"}, {"8", "25"}, {"9", "26"}, {"====================", ""},
+                                                {"A", "04"}, {"B", "05"}, {"C", "06"}, {"D", "07"}, {"E", "08"}, {"F", "09"}, {"G", "0A"}, {"H", "0B"}, {"I", "0C"}, {"J", "0D"}, {"K", "0E"},
+                                                {"L", "0F"}, {"M", "10"}, {"N", "11"}, {"O", "12"}, {"P", "13"}, {"Q", "14"}, {"R", "15"}, {"S", "16"}, {"T", "17"}, {"U", "18"}, {"V", "19"}, {"W", "1A"}, {"X", "1B"}, {"Y", "1C"}, {"Z", "1D"}, {"====================", ""},
+                                                {"Return", "28"}, {"Escape", "29"}, {"Backspace", "2A"}, {"Tab", "2B"}, {"Space", "2C"}, {"====================", ""}, {"OemMinus", "2D"}, {"OemPlus", "2E"}, {"OemOpenBracket", "2F"}, {"OemCloseBracket", "30"},
+                                                {"OemPipe", "31"}, {"OemSemiColon", "33"}, {"OemQuotes", "34"}, {"OemTilde", "35"}, {"OemComma", "36"}, {"OemPeriod", "37"}, {"OemQuestion", "38"},
+                                                {"CapsLock", "39"}, {"====================", ""}, {"F1", "3A"}, {"F2", "3B"}, {"F3", "3C"}, {"F4", "3D"}, {"F5", "3E"}, {"F6", "3F"}, {"F7", "40"}, {"F8", "41"}, {"F9", "42"}, {"F10", "43"}, {"F11", "44"}, {"F12", "45"}, {"====================", ""},
+                                                {"PrintScreen", "46"}, {"ScrollLock", "47"}, {"Break", "48"}, {"Insert", "49"}, {"Home", "4A"}, {"PageUp", "4B"}, {"PageDown", "4E"}, {"Delete", "4C"}, {"End", "4D"}, {"====================", ""}, {"Right", "4F"}, {"Left", "50"},
+                                                {"Down", "51"}, {"Up", "52"}, {"====================", ""}, {"NumLock", "53"}, {"NumPad /", "54"}, {"NumPad *", "55"}, {"NumPad -", "56"}, {"NumPad +", "57"}, {"NumPad Enter", "58"}, {"NumPad 1", "59"}, {"NumPad 2", "5A"}, {"NumPad 3", "5B"}, {"NumPad 4", "5C"},
+                                                {"NumPad 5", "5D"}, {"NumPad 6", "5E"}, {"NumPad 7", "5F"}, {"NumPad 8", "60"}, {"NumPad 9", "61"}, {"NumPad 0", "62"}, {"NumPad Del", "63"}, {"====================", ""}, {"App", "65"}, {"Keyboard Power", "66"}, {"Equals", "67"}, {"====================", ""}, {"F13", "68"}, {"F14", "69"}, {"F15", "6A"}, {"F16", "6B"},
+                                                {"F17", "6C"}, {"F18", "6D"}, {"F19", "6E"}, {"F20", "6F"}, {"F21", "70"}, {"D22", "71"}, {"F23", "72"}, {"F24", "73"}, {"====================", ""}, {"Execute", "74"}, {"Help", "75"}, {"Menu", "76"}, {"Select", "77"}, {"Stop", "78"}, {"Again", "79"}, {"Undo", "7A"}, {"Cut", "7B"}, {"Copy", "7C"},
+                                                {"Paste", "7D"}, {"Find", "7E"}, {"====================", ""}, {"Keyboard Mute", "7F"}, {"Keyboard VolumeUP", "80"}, {"Keyboard VolumeDown", "81"}, {"========== RAW INPUT MESSAGE", ""}, {"Shutdown", "8100"}, {"Sleep", "8200"}, {"Wake", "8300"}, {"========== WM_APPCOMMAND==", ""},
+                                                {"Mute", "E200"}, {"Info", "0902"}, {"VolumeUp", "E900"}, {"VolumeDown", "EA00"}, {"ChannelUp", "9C00"}, {"ChannelDown", "9D00"}, {"FastForward", "B300"}, {"Rewind", "B400"}, {"Play", "B000"}, {"Record", "B200"}, {"Pause", "B100"}, {"Stop", "B700"},
+                                                {"Next/Skip", "B500"}, {"Previous/Replay", "B600"}, {"TV Guide", "8D00"}, {"Play/Pause", "CD00"},
+                                                {"Search", "2102"}, {"Browser Home", "2302"}, {"Back", "2402"}, {"Forward", "2502"}, {"Stop", "2602"}, {"Refresh", "2702"}, {"Favorites", "2A02"}}
 
     Dim RemoteButtonTable(,,) As String = New String(,,) {{{"00", "0", ""}, {"01", "1", ""}, {"02", "2", ""}, {"03", "3", ""}, {"04", "4", ""}, {"05", "5", ""}, {"06", "6", ""}, {"07", "7", ""}, {"08", "8", ""}, {"09", "9", ""}, {"0A", "Clear", ""}, {"0B", "Enter", ""}, {"0C", "Power", ""}, {"0D", "Windows", ""}, {"0E", "Mute", ""}, {"0F", "Info/More", ""} _
                                                     , {"10", "Volume Up", ""}, {"11", "Volume Down", ""}, {"12", "Channel Up", ""}, {"13", "Channel Down", ""}, {"14", "Fast Forward", ""}, {"15", "Rewind", ""} _
@@ -735,6 +736,30 @@ Public Class frmMCERemote
                 KeytypeByte = "01"
                 ModifierByte = "CD"
                 KeyCodeByte = "00"
+            Case "Search"
+                KeytypeByte = "01"
+                ModifierByte = "21"
+                KeyCodeByte = "02"
+            Case "Browser Home"
+                KeytypeByte = "01"
+                ModifierByte = "23"
+                KeyCodeByte = "02"
+            Case "Forward"
+                KeytypeByte = "01"
+                ModifierByte = "25"
+                KeyCodeByte = "02"
+            Case "Stop"
+                KeytypeByte = "01"
+                ModifierByte = "26"
+                KeyCodeByte = "02"
+            Case "Refresh"
+                KeytypeByte = "01"
+                ModifierByte = "27"
+                KeyCodeByte = "02"
+            Case "Favorites"
+                KeytypeByte = "01"
+                ModifierByte = "2A"
+                KeyCodeByte = "02"
             Case Else
                 KeytypeByte = "04"
 
